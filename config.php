@@ -21,6 +21,7 @@ $timeline_liker = array(
 
 // Zaman Tüneli Yorum Ayarları
 $timeline_commenter = array(
+    'is_likes' => 0, // Yorum atılan gönderilerin aynı zamanda beğenilmesini istiyorsanız değeri 1 yapın.
     'interval' => 50, // Her yorum sonrası beklenecek süre (Minimum Saniye: 50)
     'comments' => array('omg', 'cool', 'wow') // Gönderilere atılacak yorumları yazın
 );

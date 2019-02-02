@@ -24,8 +24,16 @@ try
             {
                 if($feed->getMediaOrAd()->isId() && empty($feed->getMediaOrAd()->isHasLiked()))
                 {
-                    $like = $instagram->media->comment($feed->getMediaOrAd()->getId(), $random_comment);
-                    if($like->getStatus() == "ok")
+                    if($timeline_commenter['is_likes'] == 1)
+                    {
+                        $like = $instagram->media->like($feed->getMediaOrAd()->getId());
+                        if($like->getStatus() == "ok")
+                        {
+                            echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
+                        }
+                    }
+                    $comment = $instagram->media->comment($feed->getMediaOrAd()->getId(), $random_comment);
+                    if($comment->getStatus() == "ok")
                     {
                         echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was commented. => {$random_comment}\n";
                         sleep($timeline_commenter['interval']);

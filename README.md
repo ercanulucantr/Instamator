@@ -32,6 +32,8 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 --03.02.2019 00.24 itibariyle zaman tüneli yorum botu aktif hale getirilmiştir.
 
+--03.02.2019 00.41 itibariyle zaman tüneli yorum botuna opsiyonel beğeni seçeneği eklenmiştir.
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
