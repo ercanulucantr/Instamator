@@ -28,11 +28,11 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 ## Güncelleme Geçmişi
 
---02.02.2019 00.00 itibariyle zaman tüneli beğeni botu aktif hale getirilmiştir.
+--02.02.2019 00.00 # Zaman Tüneli Beğeni Botu güncellenmiştir.
 
---03.02.2019 00.24 itibariyle zaman tüneli yorum botu aktif hale getirilmiştir.
+--03.02.2019 00.24 # Zaman Tüneli Yorum Botu Eklenmiştir.
 
---03.02.2019 00.41 itibariyle zaman tüneli yorum botuna opsiyonel beğeni seçeneği eklenmiştir.
+--03.02.2019 00.41 # Zaman Tüneli Yorum Botuna Opsiyonel Beğeni Sistemi Eklenmiştir.
 
 ## Teşekkür Mesajı
 
