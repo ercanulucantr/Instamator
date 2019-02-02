@@ -22,7 +22,7 @@ if($account['username'] == '' || $account['password'] == '')
 // Zaman Tüneli Beğeni Ayarları
 $timeline_liker = array(
     'interval' => 20, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 20)
-	'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
 );
 
 
@@ -30,6 +30,6 @@ $timeline_liker = array(
 $timeline_commenter = array(
     'is_likes' => 0, // Yorum atılan gönderilerin aynı zamanda beğenilmesini istiyorsanız değeri 1 yapın.
     'interval' => 50, // Her yorum sonrası beklenecek süre (Minimum Saniye: 50)
-	'have_err' => 120, // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
-    'comments' => array('omg', 'cool', 'wow') // Gönderilere atılacak yorumları yazın.
+    'have_err' => 120, // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+    'comments' => array('omg', 'cool', 'wow') // Gönderilere atılacak yorumları yazın
 );
