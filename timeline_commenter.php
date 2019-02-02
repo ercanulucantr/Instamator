@@ -31,12 +31,22 @@ try
                         {
                             echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
                         }
+                        else
+                        {
+                            echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_commenter['have_err']} seconds.\n";
+                            sleep($timeline_commenter['have_err']);
+                        }
                     }
                     $comment = $instagram->media->comment($feed->getMediaOrAd()->getId(), $random_comment);
                     if($comment->getStatus() == "ok")
                     {
                         echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was commented. => {$random_comment}\n";
                         sleep($timeline_commenter['interval']);
+                    }
+                    else
+                    {
+                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_commenter['have_err']} seconds.\n";
+                        sleep($timeline_commenter['have_err']);
                     }
                 }
             }
