@@ -31,5 +31,5 @@ $timeline_commenter = array(
     'is_likes' => 0, // Yorum atılan gönderilerin aynı zamanda beğenilmesini istiyorsanız değeri 1 yapın.
     'interval' => 50, // Her yorum sonrası beklenecek süre (Minimum Saniye: 50)
 	'have_err' => 120, // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
-    'comments' => array('omg', 'cool', 'wow') // Gönderilere atılacak yorumları yazın
+    'comments' => array('omg', 'cool', 'wow') // Gönderilere atılacak yorumları yazın.
 );
