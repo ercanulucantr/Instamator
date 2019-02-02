@@ -19,16 +19,16 @@ try
         $feeds = $instagram->timeline->getTimelineFeed($next_max_id);
         foreach($feeds->getFeedItems() as $feed)
         {
-            $randomtxt = $timeline_commenter['comments'][array_rand($timeline_commenter['comments'])];
+            $random_comment = $timeline_commenter['comments'][array_rand($timeline_commenter['comments'])];
             if($feed->isMediaOrAd() == 1)
             {
                 if($feed->getMediaOrAd()->isId() && empty($feed->getMediaOrAd()->isHasLiked()))
                 {
-                    $like = $instagram->media->comment($feed->getMediaOrAd()->getId(), $randomtxt);
+                    $like = $instagram->media->comment($feed->getMediaOrAd()->getId(), $random_comment);
                     if($like->getStatus() == "ok")
                     {
-                        echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was commented. => {$randomtxt}\n";
-                        sleep($timeline_liker['interval']);
+                        echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was commented. => {$random_comment}\n";
+                        sleep($timeline_commenter['interval']);
                     }
                 }
             }
