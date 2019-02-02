@@ -17,3 +17,10 @@ if($account['username'] == '' || $account['password'] == '')
 $timeline_liker = array(
     'interval' => 20 // Her beğeni sonrası beklenecek süre (Minimum Saniye: 20)
 );
+
+
+// Zaman Tüneli Yorum Ayarları
+$timeline_commenter = array(
+    'interval' => 50, // Her yorum sonrası beklenecek süre (Minimum Saniye: 50)
+    'comments' => array('omg', 'cool', 'wow') // Gönderilere atılacak yorumları yazın
+);
