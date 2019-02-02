@@ -1,19 +1,14 @@
 <?php
 require __DIR__."/vendor/autoload.php";
+require __DIR__."/config.php";
 
 $instagram = new \InstagramAPI\Instagram(false, false);
 $signature = \InstagramAPI\Signatures::generateUUID();
 
-///////////////
-$username = ''; // your instagram username
-$password = ''; // your instagram password
-$interval = 20; // per sleep seconds (min: 10 | max: 200);
-//////////////
-
 try
 {
-    echo("[?] Try for login...\n");
-    $instagram->login($username, $password);
+    echo("[?] Try for login as {$account['username']}...\n");
+    $instagram->login($account['username'], $account['password']);
     echo("[!] Login successfully!\n");
     sleep(2);
 
@@ -32,7 +27,7 @@ try
                     if($like->getStatus() == "ok")
                     {
                         echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
-                        sleep($interval);
+                        sleep($timeline_liker['interval']);
                     }
                 }
             }
