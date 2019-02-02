@@ -34,6 +34,10 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 --03.02.2019 00.41 # Zaman Tüneli Yorum Botu'na opsiyonel beğeni sistemi eklenmiştir.
 
+--03.02.2019 01.28 # Zaman Tüneli Yorum Beğeni Botu eklenmiştir.
+
+--03.02.2019 01.29 # Zaman Tüneli Yorum Beğeni Botu'na opsiyonel medya beğeni sistemi eklenmiştir.
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
