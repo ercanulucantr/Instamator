@@ -48,3 +48,9 @@ $self_posted_media_deleter = array(
     'interval' => 20, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 20)
     'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
 );
+
+// Direkt Mesaj Kutusu Mesajlarını Silme Ayarları
+$self_direct_messages_deleter = array(
+    'interval' => 10, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 10)
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+);

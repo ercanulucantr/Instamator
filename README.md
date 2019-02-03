@@ -42,6 +42,8 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 --03.02.2019 13.09 #v1.0.1 Bulunan hatalar düzeltilerek v1.0.1 sürümüne yükseltilmiştir.
 
+--03.02.2019 13.48 #v1.0.1 Direkt Mesaj Silme Botu eklenmiştir.
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
