@@ -50,6 +50,8 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 --03.02.2019 14.31 #v1.0.1 Takibi Bırakanları Takipten Çıkma Botu eklenmiştir.
 
+--03.02.2019 14.43 #v1.0.1 Takibi Bırakanları Takipten Çıkma Botu'na maksimum işlem sınırı eklenmiştir. 
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
