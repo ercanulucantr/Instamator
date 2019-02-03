@@ -36,21 +36,24 @@ try
                             sleep($timeline_post_comment_liker['have_err']);
                         }
                     }
-                    $comments = $instagram->media->getComments($feed->getMediaOrAd()->getId())->getComments();
-                    for($i = 0; $i < $timeline_post_comment_liker['max_like']; $i++)
+                    if($instagram->media->getComments($feed->getMediaOrAd()->getId())->isComments())
                     {
-                        if($comments[$i]->isPk() && empty($comments[$i]->isHasLikedComment()))
+                        $comments = $instagram->media->getComments($feed->getMediaOrAd()->getId())->getComments();
+                        for($i = 0; $i < $timeline_post_comment_liker['max_like']; $i++)
                         {
-                            $like = $instagram->media->likeComment($comments[$i]->getPk());
-                            if($like->getStatus() == "ok")
+                            if($comments[$i]->isPk() && empty($comments[$i]->isHasLikedComment()))
                             {
-                                echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed in ".$comments[$i]->getUser()->getUsername()." user comment was liked.\n";
-                                sleep($timeline_post_comment_liker['interval']);
-                            }
-                            else
-                            {
-                                echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_comment_liker['have_err']} seconds.\n";
-                                sleep($timeline_post_comment_liker['have_err']);
+                                $like = $instagram->media->likeComment($comments[$i]->getPk());
+                                if($like->getStatus() == "ok")
+                                {
+                                    echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed in ".$comments[$i]->getUser()->getUsername()." user comment was liked.\n";
+                                    sleep($timeline_post_comment_liker['interval']);
+                                }
+                                else
+                                {
+                                    echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_comment_liker['have_err']} seconds.\n";
+                                    sleep($timeline_post_comment_liker['have_err']);
+                                }
                             }
                         }
                     }
