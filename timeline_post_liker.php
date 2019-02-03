@@ -27,12 +27,12 @@ try
                     if($like->getStatus() == "ok")
                     {
                         echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
-                        sleep($timeline_liker['interval']);
+                        sleep($timeline_post_liker['interval']);
                     }
                     else
                     {
-                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_liker['have_err']} seconds.\n";
-                        sleep($timeline_liker['have_err']);
+                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_liker['have_err']} seconds.\n";
+                        sleep($timeline_post_liker['have_err']);
                     }
                 }
             }
