@@ -45,6 +45,7 @@ try
     echo("[!] Analyzing self following and self followers list...\n");
     $users = array_values(array_diff($following_pool, $followers_pool));
     echo("[!] ".count($users)." user is not follow back you...\n");
+    $unfollowed = 0;
     foreach($users as $id => $pk)
     {
         $unfollow = $instagram->people->unfollow($pk);
@@ -52,12 +53,18 @@ try
         {
             echo "[+] ".date("d-m-Y H:i:s")." on ".$instagram->people->getInfoById($pk)->getUser()->getUsername()." user was unfollowed.\n";
             sleep($self_non_followers_unfollower['interval']);
+            $unfollowed++;
             unset($users[$id]);
         }
         else
         {
             echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$self_non_followers_unfollower['have_err']} seconds.\n";
             sleep($self_non_followers_unfollower['have_err']);
+        }
+        if($unfollowed === $self_non_followers_unfollower['max_unfollow'])
+        {
+            echo "[!] ".date("d-m-Y H:i:s")." on unfollowed {$self_non_followers_unfollower['max_unfollow']} users, Job successfully completed.\n";
+            die;
         }
     }
 }

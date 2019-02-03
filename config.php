@@ -69,5 +69,6 @@ $target_user_following_follower = array(
 
 $self_non_followers_unfollower = array(
     'interval' => 3, // Her takip bırakma sonrası beklenecek süre (Minimum Saniye: 3)
-    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+    'have_err' => 120, // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+    'max_unfollow' => 200 // Komut verildiğinde maksimum takipten çıkılacak kişi sayısı (Maksimum: 200)
 );
