@@ -51,6 +51,16 @@ $self_posted_media_deleter = array(
 
 // Direkt Mesaj Kutusu Mesajlarını Silme Ayarları
 $self_direct_messages_deleter = array(
-    'interval' => 10, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 10)
+    'interval' => 20, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 20)
     'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+);
+
+$target_user_followers_follower = array(
+    'interval' => 10, // Her takip sonrası beklenecek süre (Minimum Saniye: 10)
+    'target_username' => 'reynmen' // Takipçilerini takip etmek istediğiniz kullanıcının adını yazın.
+);
+
+$target_user_following_follower = array(
+    'interval' => 10, // Her takip sonrası beklenecek süre (Minimum Saniye: 10)
+    'target_username' => 'reynmen' // Takip ettiklerini takip etmek istediğiniz kullanıcının adını yazın.
 );

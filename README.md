@@ -44,6 +44,10 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 --03.02.2019 13.48 #v1.0.1 Direkt Mesaj Silme Botu eklenmiştir.
 
+--03.02.2019 14.05 #v1.0.1 Hedef Kullanıcı Takipçilerini Takip Etme Botu eklenmiştir.
+
+--03.02.2019 14.05 #v1.0.1 Hedef Kullanıcı Takip Ettiklerini Takip Etme Botu eklenmiştir.
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
