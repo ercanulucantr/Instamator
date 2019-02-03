@@ -28,19 +28,19 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 ## Güncelleme Geçmişi
 
---02.02.2019 00.00 # Zaman Tüneli Beğeni Botu güncellenmiştir.
+--02.02.2019 00.00 #v1.0.0 Zaman Tüneli Beğeni Botu güncellenmiştir.
 
---03.02.2019 00.24 # Zaman Tüneli Yorum Botu eklenmiştir.
+--03.02.2019 00.24 #v1.0.0 Zaman Tüneli Yorum Botu eklenmiştir.
 
---03.02.2019 00.41 # Zaman Tüneli Yorum Botu'na opsiyonel beğeni sistemi eklenmiştir.
+--03.02.2019 00.41 #v1.0.0 Zaman Tüneli Yorum Botu'na opsiyonel beğeni sistemi eklenmiştir.
 
---03.02.2019 01.28 # Zaman Tüneli Yorum Beğeni Botu eklenmiştir.
+--03.02.2019 01.28 #v1.0.0 Zaman Tüneli Yorum Beğeni Botu eklenmiştir.
 
---03.02.2019 01.29 # Zaman Tüneli Yorum Beğeni Botu'na opsiyonel medya beğeni sistemi eklenmiştir.
+--03.02.2019 01.29 #v1.0.0 Zaman Tüneli Yorum Beğeni Botu'na opsiyonel medya beğeni sistemi eklenmiştir.
 
---03.02.2019 13.00 # Paylaşım Silme Botu eklenmiştir.
+--03.02.2019 13.00 #v1.0.0 Paylaşım Silme Botu eklenmiştir.
 
---03.02.2019 13.09 # Bulunan hatalar düzeltilerek v1.0.1 sürümüne yükseltilmiştir.
+--03.02.2019 13.09 #v1.0.1 Bulunan hatalar düzeltilerek v1.0.1 sürümüne yükseltilmiştir.
 
 ## Teşekkür Mesajı
 
