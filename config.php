@@ -37,7 +37,7 @@ $timeline_post_commenter = array(
 
 // Zaman Tüneli Yorum Beğeni Ayarları
 $timeline_post_comment_liker = array(
-    'max_like' => 3, // Her medyada beğenilecek yorum sayısı (Maksimum Adet: 5)
+    'max_like' => 1, // Her medyada beğenilecek yorum sayısı (Maksimum Adet: 5)
     'is_likes' => 1, // Yorumların beğenildiği medyalarıda beğenmek istiyorsanız değeri 1 yapın.
     'interval' => 20, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 20)
     'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)

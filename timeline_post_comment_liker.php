@@ -14,6 +14,7 @@ try
 
     echo("[!] Getting timeline medias...\n");
     $next_max_id = null;
+    $liked = 0;
     do
     {
         $feeds = $instagram->timeline->getTimelineFeed($next_max_id);
@@ -39,8 +40,13 @@ try
                     if($instagram->media->getComments($feed->getMediaOrAd()->getId())->isComments())
                     {
                         $comments = $instagram->media->getComments($feed->getMediaOrAd()->getId())->getComments();
-                        for($i = 0; $i < $timeline_post_comment_liker['max_like']; $i++)
+                        for($i = 0; $i < $instagram->media->getComments($feed->getMediaOrAd()->getId())->getCommentCount(); $i++)
                         {
+                            if($timeline_post_comment_liker['max_like'] === $liked)
+                            {
+                                $liked = 0;
+                                break;
+                            }
                             if($comments[$i]->isPk() && empty($comments[$i]->isHasLikedComment()))
                             {
                                 $like = $instagram->media->likeComment($comments[$i]->getPk());
@@ -48,6 +54,7 @@ try
                                 {
                                     echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed in ".$comments[$i]->getUser()->getUsername()." user comment was liked.\n";
                                     sleep($timeline_post_comment_liker['interval']);
+                                    $liked++;
                                 }
                                 else
                                 {
