@@ -44,7 +44,7 @@ try
 
     echo("[!] Analyzing self following and self followers list...\n");
     $users = array_values(array_diff($following_pool, $followers_pool));
-    echo("[!] {count($users)} user is not follow back you...\n");
+    echo("[!] ".count($users)." user is not follow back you...\n");
     foreach($users as $id => $pk)
     {
         $unfollow = $instagram->people->unfollow($pk);
