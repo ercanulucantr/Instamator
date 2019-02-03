@@ -1,7 +1,7 @@
 <?php
 set_time_limit(0);
 //error_reporting(0);
-date_default_timezone_set('UTC');
+date_default_timezone_set('Europe/Istanbul');
 echo chr(27).chr(91).'H'.chr(27).chr(91).'J';
 echo "88                                                                                                     
 88                         ,d                                               ,d                         
