@@ -57,10 +57,17 @@ $self_direct_messages_deleter = array(
 
 $target_user_followers_follower = array(
     'interval' => 10, // Her takip sonrası beklenecek süre (Minimum Saniye: 10)
-    'target_username' => 'reynmen' // Takipçilerini takip etmek istediğiniz kullanıcının adını yazın.
+    'target_username' => 'reynmen', // Takipçilerini takip etmek istediğiniz kullanıcının adını yazın.
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
 );
 
 $target_user_following_follower = array(
     'interval' => 10, // Her takip sonrası beklenecek süre (Minimum Saniye: 10)
-    'target_username' => 'reynmen' // Takip ettiklerini takip etmek istediğiniz kullanıcının adını yazın.
+    'target_username' => 'reynmen', // Takip ettiklerini takip etmek istediğiniz kullanıcının adını yazın.
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+);
+
+$self_non_followers_unfollower = array(
+    'interval' => 3, // Her takip bırakma sonrası beklenecek süre (Minimum Saniye: 3)
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
 );
