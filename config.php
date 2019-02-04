@@ -74,7 +74,19 @@ $self_non_followers_unfollower = array(
 );
 
 $story_feeds_seener = array(
-    'interval' => 10, // Her hikaye izleme sonrası beklenecek süre (Minimum Saniye: 3)
+    'interval' => 10, // Her takip bırakma sonrası beklenecek süre (Minimum Saniye: 3)
     'have_err' => 120, // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
     'max_seen' => 200 // Komut verildiğinde maksimum izlenecek hikaye sayısı (Maksimum: 200)
+);
+
+$target_user_feeds_liker = array(
+    'interval' => 20, // Her beğeni sonrası beklenecek süre (Minimum Saniye: 20)
+    'target_username' => 'reynmen', // Medyalarını beğenmek istediğiniz kullanıcının adını yazın.
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
+);
+
+$target_user_feeds_saver = array(
+    'interval' => 20, // Her kaydetme sonrası beklenecek süre (Minimum Saniye: 20)
+    'target_username' => 'reynmen', // Medyalarını kaydetmek istediğiniz kullanıcının adını yazın.
+    'have_err' => 120 // Her hangi bir hata alınır ise beklenecek süre (Minimum Saniye: 120)
 );

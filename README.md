@@ -56,6 +56,12 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 --04.02.2019 23.08 #v1.0.1 Hikaye İzleme Botu eklenmiştir.
 
+--05.02.2019 01.05 #v1.0.1 Videolu anlatım eklenmiştir [**İzle**](https://youtu.be/a1i-KJ0xaDE)
+
+--05.02.2019 01.06 #v1.0.1 Hedef Kullanıcı Gönderilerini Beğenme Botu Eklenmiştir.
+
+--05.02.2019 01.06 #v1.0.1 Hedef Kullanıcı Gönderilerini Kaydetme Botu Eklenmiştir.
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
