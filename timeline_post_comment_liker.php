@@ -12,7 +12,7 @@ try
     echo("[!] Login successfully!\n");
     sleep(2);
 
-    echo("[!] Getting timeline medias...\n");
+    echo("[!] Getting timeline feeds...\n");
     $next_max_id = null;
     $liked = 0;
     do
@@ -24,17 +24,17 @@ try
             {
                 if($feed->getMediaOrAd()->isId() && empty($feed->getMediaOrAd()->isHasLiked()))
                 {
-                    if($timeline_post_comment_liker['is_likes'] == 1)
+                    if($timeline_feed_comment_liker['is_likes'] == 1)
                     {
                         $like = $instagram->media->like($feed->getMediaOrAd()->getId());
                         if($like->getStatus() == "ok")
                         {
-                            echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
+                            echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed was liked.\n";
                         }
                         else
                         {
-                            echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_comment_liker['have_err']} seconds.\n";
-                            sleep($timeline_post_comment_liker['have_err']);
+                            echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_feed_comment_liker['have_err']} seconds.\n";
+                            sleep($timeline_feed_comment_liker['have_err']);
                         }
                     }
                     if($instagram->media->getComments($feed->getMediaOrAd()->getId())->isComments())
@@ -42,7 +42,7 @@ try
                         $comments = $instagram->media->getComments($feed->getMediaOrAd()->getId())->getComments();
                         for($i = 0; $i < $instagram->media->getComments($feed->getMediaOrAd()->getId())->getCommentCount(); $i++)
                         {
-                            if($timeline_post_comment_liker['max_like'] === $liked)
+                            if($timeline_feed_comment_liker['max_like'] === $liked)
                             {
                                 $liked = 0;
                                 break;
@@ -53,13 +53,13 @@ try
                                 if($like->getStatus() == "ok")
                                 {
                                     echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed in ".$comments[$i]->getUser()->getUsername()." user comment was liked.\n";
-                                    sleep($timeline_post_comment_liker['interval']);
+                                    sleep($timeline_feed_comment_liker['interval']);
                                     $liked++;
                                 }
                                 else
                                 {
-                                    echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_comment_liker['have_err']} seconds.\n";
-                                    sleep($timeline_post_comment_liker['have_err']);
+                                    echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_feed_comment_liker['have_err']} seconds.\n";
+                                    sleep($timeline_feed_comment_liker['have_err']);
                                 }
                             }
                         }

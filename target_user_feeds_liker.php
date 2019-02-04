@@ -12,7 +12,7 @@ try
     echo("[!] Login successfully!\n");
     sleep(2);
 
-    echo("[!] Getting {$target_user_feeds_liker['target_username']}'s medias...\n");
+    echo("[!] Getting {$target_user_feeds_liker['target_username']}'s feeds...\n");
     $next_max_id = null;
     $target_user = $instagram->people->getUserIdForName($target_user_feeds_liker['target_username']);
     do
@@ -23,7 +23,7 @@ try
             $like = $instagram->media->like($feed->getId());
             if($like->getStatus() == "ok")
             {
-                echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getId()." media was liked.\n";
+                echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getId()." feed was liked.\n";
                 sleep($target_user_feeds_liker['interval']);
             }
             else

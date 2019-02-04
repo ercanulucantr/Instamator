@@ -12,41 +12,41 @@ try
     echo("[!] Login successfully!\n");
     sleep(2);
 
-    echo("[!] Getting timeline medias...\n");
+    echo("[!] Getting timeline feeds...\n");
     $next_max_id = null;
     do
     {
         $feeds = $instagram->timeline->getTimelineFeed($next_max_id);
         foreach($feeds->getFeedItems() as $feed)
         {
-            $random_comment = $timeline_post_commenter['comments'][array_rand($timeline_post_commenter['comments'])];
+            $random_comment = $timeline_feed_commenter['comments'][array_rand($timeline_feed_commenter['comments'])];
             if($feed->isMediaOrAd() == 1)
             {
                 if($feed->getMediaOrAd()->isId() && empty($feed->getMediaOrAd()->isHasLiked()))
                 {
-                    if($timeline_post_commenter['is_likes'] == 1)
+                    if($timeline_feed_commenter['is_likes'] == 1)
                     {
                         $like = $instagram->media->like($feed->getMediaOrAd()->getId());
                         if($like->getStatus() == "ok")
                         {
-                            echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
+                            echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed was liked.\n";
                         }
                         else
                         {
-                            echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_commenter['have_err']} seconds.\n";
-                            sleep($timeline_post_commenter['have_err']);
+                            echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_feed_commenter['have_err']} seconds.\n";
+                            sleep($timeline_feed_commenter['have_err']);
                         }
                     }
                     $comment = $instagram->media->comment($feed->getMediaOrAd()->getId(), $random_comment);
                     if($comment->getStatus() == "ok")
                     {
-                        echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was commented. => {$random_comment}\n";
-                        sleep($timeline_post_commenter['interval']);
+                        echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed was commented. => {$random_comment}\n";
+                        sleep($timeline_feed_commenter['interval']);
                     }
                     else
                     {
-                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_commenter['have_err']} seconds.\n";
-                        sleep($timeline_post_commenter['have_err']);
+                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_feed_commenter['have_err']} seconds.\n";
+                        sleep($timeline_feed_commenter['have_err']);
                     }
                 }
             }

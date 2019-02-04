@@ -12,7 +12,7 @@ try
     echo("[!] Login successfully!\n");
     sleep(2);
 
-    echo("[!] Getting self posted medias...\n");
+    echo("[!] Getting self feeds...\n");
     $next_max_id = null;
     do
     {
@@ -23,12 +23,12 @@ try
             if($delete->getStatus() == "ok")
             {
                 echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getId()." post was deleted.\n";
-                sleep($self_posted_media_deleter['interval']);
+                sleep($self_feeds_deleter['interval']);
             }
             else
             {
-                echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$self_posted_media_deleter['have_err']} seconds.\n";
-                sleep($self_posted_media_deleter['have_err']);
+                echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$self_feeds_deleter['have_err']} seconds.\n";
+                sleep($self_feeds_deleter['have_err']);
             }
         }
         $next_max_id = $feeds->getNextMaxId();

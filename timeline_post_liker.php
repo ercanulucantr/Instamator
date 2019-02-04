@@ -12,7 +12,7 @@ try
     echo("[!] Login successfully!\n");
     sleep(2);
 
-    echo("[!] Getting timeline medias...\n");
+    echo("[!] Getting timeline feeds...\n");
     $next_max_id = null;
     do
     {
@@ -26,13 +26,13 @@ try
                     $like = $instagram->media->like($feed->getMediaOrAd()->getId());
                     if($like->getStatus() == "ok")
                     {
-                        echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s post was liked.\n";
-                        sleep($timeline_post_liker['interval']);
+                        echo "[+] ".date("d-m-Y H:i:s")." on ".$feed->getMediaOrAd()->getUser()->getUsername()."'s feed was liked.\n";
+                        sleep($timeline_feed_liker['interval']);
                     }
                     else
                     {
-                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_post_liker['have_err']} seconds.\n";
-                        sleep($timeline_post_liker['have_err']);
+                        echo "[!] ".date("d-m-Y H:i:s")." on have a error, please wait for next job in {$timeline_feed_liker['have_err']} seconds.\n";
+                        sleep($timeline_feed_liker['have_err']);
                     }
                 }
             }

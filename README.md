@@ -64,6 +64,8 @@ Dilerseniz [buradan](https://youtu.be/a1i-KJ0xaDE) videolu anlatımı izleyebili
 
 --05.02.2019 01.06 #v1.0.1 Hedef Kullanıcı Gönderilerini Kaydetme Botu Eklenmiştir.
 
+--05.02.2019 01.31 #v1.0.2 Genel optimizasyon düzenlemeleri yapılmış olup, hatalar giderilmiştir.
+
 ## Teşekkür Mesajı
 
 Instagram API sistemini bizlere sağladığı için [mgp25](https://github.com/mgp25) kullanıcısına teşekkürlerimi sunuyorum.
