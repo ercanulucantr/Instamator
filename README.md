@@ -1,5 +1,5 @@
 
-# Instamator (2019)
+# Instamator (2019) v1.0.2
 
 Merhabalar,
 Kısa zaman önce **Instamator** yazılımını sizlerle paylaşmıştım ancak eksikleri ve stabilize olmaması nedeniyle sıfırdan kodlayarak sizlere sunuyorum.
