@@ -22,6 +22,8 @@ Bu yazılım sayesinde termalinize yazdığınız tek komut ile belirli aralıkl
 
 **Instamator**'u kullanmanız için bilgisayarınızda [**Composer**](https://getcomposer.org/download/) ve PHP desteği için [**XAMPP**](https://www.apachefriends.org/tr/download.html) veya benzeri PHP destekçisi programlardan birinin kesinlikle yüklü olması gerekmektedir.
 
+Dilerseniz [buradan](https://youtu.be/a1i-KJ0xaDE) videolu anlatımı izleyebilirisiniz.
+
 ## Komutları Nelerdir?
 
 **Instamator**'un çalışması için öncelikle yukarıdaki programları kurmanız, daha sonra bu responstory'i indirmeniz daha sonra indirdiğiniz klasörü çıkarıp, "**config.php**" dosyası içerisinden gerekli ayarları yapmanız gerekmektedir ayarları yaptıktan sonra, klasörün içerisindeki boş bir alana "SHIFT" tuşuna basılı tutarak sağ tık yaptıktan sonra "**Komut penceresini burada aç**" veya "**Powershell pencersini buradan açın**" tarzı ek bir seçenek gelecektir. Seçtikten sonra ise komut satırına "**php dosya.php**" şeklinde yazarak botunuzu çalıştırabilirsiniz.
